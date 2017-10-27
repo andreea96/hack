@@ -26,7 +26,11 @@ class Industry
      * @ORM\Column(type="string")
      */
     private $name;
-
+    /**
+     * [getId description]
+     * @ORM\OneToMany(targetEntity="Subindustry", mappedBy="Industry")
+     */
+    private $subindustries;
     /**
      * @return mixed
      */
@@ -58,6 +62,8 @@ class Industry
     {
         $this->name = $name;
     }
+
+    
 
 
 
