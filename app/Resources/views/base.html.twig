@@ -13,6 +13,7 @@
         {% block body %}{% endblock %}
         {% block javascripts %}
             <script src="{{ asset('js/reveal.js') }}" > </script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
             <script>
                 Reveal.initialize({
                     // Display controls in the bottom right corner
@@ -31,7 +32,7 @@
                     history: false,
 
                     // Enable keyboard shortcuts for navigation
-                    keyboard: true,
+                    keyboard: false,
 
                     // Enable the slide overview mode
                     overview: true,

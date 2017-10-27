@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: andreea.olaru
  * Date: 10/27/2017
- * Time: 10:28 AM
+ * Time: 4:53 PM
  */
 
 namespace AppBundle\Entity;
@@ -13,19 +13,20 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="industry")
+ * @ORM\Table(name="traffic")
  */
-class Industry
+class Traffic
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */protected $id;
-    /**
-     * @ORM\Column(type="string")
      */
-    private $name;
+    protected $id;
+    /**
+     * @ORM\Column(type="bigint")
+     */
+    private $value;
 
     /**
      * @return mixed
@@ -46,21 +47,18 @@ class Industry
     /**
      * @return mixed
      */
-    public function getName()
+    public function getValue()
     {
-        return $this->name;
+        return $this->value;
     }
 
     /**
-     * @param mixed $name
+     * @param mixed $value
      */
-    public function setName($name)
+    public function setValue($value)
     {
-        $this->name = $name;
+        $this->value = $value;
     }
-
-
-
 
 
 

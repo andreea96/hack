@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: andreea.olaru
  * Date: 10/27/2017
- * Time: 10:28 AM
+ * Time: 4:44 PM
  */
 
 namespace AppBundle\Entity;
@@ -13,15 +13,16 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="industry")
+ * @ORM\Table(name="subindustry")
  */
-class Industry
+class Subindustry
 {
     /**
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      * @ORM\Column(type="integer")
-     */protected $id;
+     */
+    protected $id;
     /**
      * @ORM\Column(type="string")
      */
@@ -60,8 +61,10 @@ class Industry
     }
 
 
-
-
-
-
+    public function __toString()
+    {
+        if($this->name)
+            return $this->name;
+        return 'n/a';
+    }
 }

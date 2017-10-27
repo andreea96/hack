@@ -14,12 +14,12 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        //$userInfo=new InfoFormType();
-        //$form=$this->createFormBuilder($userInfo)->getForm();
 
+        $form=$this->createForm(InfoFormType::class);
+        //dump($form);die;
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
-            //'form'=>$form->createView(),
+            'form'=>$form->createView(),
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }

@@ -3,8 +3,31 @@
 {% block body %}
     <div class="reveal">
         <div class="slides">
-            <section data-background-image="{{ asset('images/redox_01.png') }} "> </section>
+            <section data-background-image="{{ asset('images/redox_01.png') }} "> {% include 'default/formular.html.twig' %}
+
+                {{ form_start(form) }}
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+                <button type="submit" onclick="ValidateForm()" class="btn btn-success" formnovalidate>Rezultat</button>
+
+            </section>
             <section>Slide 2</section>
         </div>
     </div>
+    <script>
+        function ValidateForm() {
+            //alert('wut?');
+            //validari
+            if(1){//aka if form not valid stai pe loc
+               // Reveal.togglePause();
+                //Reveal.slide(1);
+                alert('fds');
+                Reveal.prev();
+                //mesaj de eroare
+            }
+            else {
+            Reveal.next();}
+
+        }
+    </script>
 {% endblock %}
