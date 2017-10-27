@@ -27,10 +27,22 @@ class Subindustry
      * @ORM\Column(type="string")
      */
     private $name;
+    /**
+     * @ORM\Column(type="integer")
+     * @return [type] [description]
+     */
+    private $trafficSM;
+
+    /**
+     * @ORM\Column(type="integer")
+     * @return [type] [description]
+     */
+    private $trafficGoogle;
 
     /**
      * @return mixed
      */
+
     public function getId()
     {
         return $this->id;
