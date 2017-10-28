@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Subindustry;
+use AppBundle\Entity\URL;
 use AppBundle\Form\InfoFormType;
 use AppBundle\Form\UserInfoType;
 use AppBundle\Service\FormulaGenerator;
@@ -22,9 +23,7 @@ class DefaultController extends Controller
     {
 
         $formInfo=$this->createForm(InfoFormType::class);
-        //dump($form);die;
-        // replace this example code with whatever you need
-        //$formContact=$this->createForm(UserInfoType::class);
+
 
         if ($request->get($formInfo->getName())) {
             $formInfo->handleRequest($request);}
@@ -49,15 +48,15 @@ class DefaultController extends Controller
             $values['traficPotentialSM']=$generator->getTrafficPotentialSM();
             $values['traficPotentialTotal']=$generator->getTrafficPotentialTotal();
             $session->set('valueGeneratorObject',$generator);
-            dump($generator->getTrafficPotentialGoogle());
-            dump($generator->getTrafficPotentialSM());
-            dump($generator->getTrafficPotentialTotal());
-            dump($generator->getVanzaridinGoogle());
-            dump($generator->getVanzaridinSM());
-            dump($generator->getVanzariTotale());
-            dump($generator->getRevenuedinSM());
-            dump($generator->getRevenueGoogle());
-            dump($generator->getRevenueTotal());
+
+            $url=new URL();
+            $url->setUrl( $formInfo->getData()['site']);
+
+            //persist to DB
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($url);
+            $em->flush();
+
             return $this->redirectToRoute('results');
         }
 
