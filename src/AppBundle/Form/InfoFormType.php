@@ -9,7 +9,14 @@
 namespace AppBundle\Form;
 
 
+use AppBundle\Entity\Industry;
+use AppBundle\Entity\Subindustry;
+use AppBundle\Entity\URL;
+use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\Mapping\Entity;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Count;
@@ -21,24 +28,19 @@ class InfoFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('industrie',null,[
+            ->add('industrie',EntityType::class,[
+                'attr'=>['placeholder'=>'Industrie'],
+
+                'class'=> Subindustry::class,
+                'query_builder'=>function(EntityRepository $repository){
+                return $repository->createQueryBuilder('subindustrie')->orderBy('subindustrie.name','asc');
+                },
                 'constraints' => array(
                     new NotBlank(['message' => 'Introduceti industria din care faceti parte']))])
 
-            ->add('email',null,[
-                'constraints' => array(
-                    new NotBlank(array('message' => 'Introduceti mail')),
-                    new Email(array('message' => 'Email invalid')))])
-            ->add('trafic',null, [
-                'constraints' => array(
-                    new NotBlank(array('message' => 'Introduceti traficul')))])
-
-
-            ->add('volum_cos',null,[
-                'constraints' => array(
-                    new NotBlank(array('message' => 'Introduceti volum mediu/cos')))]);
-
-
+            ->add('site',TextType::class,[
+                    'constraints'=>[new NotBlank(['message'=> 'Ne trebuie url-ul site-ului tau'])]
+                ]);
 
     }
 }

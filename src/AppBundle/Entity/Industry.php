@@ -31,6 +31,22 @@ class Industry
      * @ORM\OneToMany(targetEntity="Subindustry", mappedBy="Industry")
      */
     private $subindustries;
+
+    /**
+     * @return mixed
+     */
+    public function getSubindustries()
+    {
+        return $this->subindustries;
+    }
+
+    /**
+     * @param mixed $subindustries
+     */
+    public function setSubindustries($subindustries)
+    {
+        $this->subindustries = $subindustries;
+    }
     /**
      * @return mixed
      */
@@ -63,11 +79,10 @@ class Industry
         $this->name = $name;
     }
 
-    
-
-
-
-
+    function __toString()
+    {
+        return $this->name;
+    }
 
 
 }

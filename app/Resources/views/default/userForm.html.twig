@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <br />
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            <div class="card text-center" style="height: auto; position: absolute; top: 0%; margin:auto; width:60%">
+                <div class="card-header">
+                    <h1>Potentialul site-ului tau este de...
+                    </h1>
+                </div>
+                <div class="card-body text-center center row">
+
+                    <p class="card-text  align-content-center" >
+                    <div class="col-md-6">
+                        <div class="jumbotron jumbotron-fluid">
+                            <div class="container">
+                                <h3 class="display-5">{{ traficPotentialTotal }} vizite pe luna</h3>
+                    <p class="lead">Lunar, exista {{ traficTotalGoogle }} de useri care cauta in Google produsele din industria ta! 60% dintre acestia dau click pe unul din primele trei rezultate, de ce nu fi si tu acolo?
+                        Pe Facebook, sunt {{ traficTotalSM }} de useri in Romania interesati de produsele din industra ta! Daca ajungi sa le atragi atentia, poti atrage pana la {{ traficPotentialSM }} de vizite lunar! .</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-6">
+                        <div class="jumbotron jumbotron-fluid" style="background-color: pink">
+                            <div class="container">
+                                <h3 class="display-5">{{  vanzariTotale }} de vanzari /luna</h3>
+                                <br />
+                                <br />
+
+
+                                <p class="lead">Lunar, poti avea pana la {{ traficPotentialTotal }} de vizite in site. Statistic, 1.5% din vizitatori ajung sa cumpere.
+                                    Astfel, te poti astepta la aproximativ {{ vanzariTotale }} de vanzari in fiecare luna!
+                                    <br />
+                                    <br />
+
+
+                                </p>
+                            </div>
+                    </div>
+                    </div>
+
+                    </p>
+    </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h3 class="display-5">{{ revenueTotal  }} RON venit pe luna</h3>
+                        <p class="lead">Conform unui studiu realizat de GPeC, valoarea medie a unei comenzi pentru industria ta este de aproximativ 200 de RON. Poti obtine asadar lunar vanzari in valoare totala de {{ revenueTotal}} de RON!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                    <hr>
+                    <div class="col-md-12">
+                        <p class="card-text align-content-center">
+                        <div class="col-md-12">
+                            {{ form_start(userForm) }}
+
+                            {{ form_row(userForm.email,{'label':'Email*'}) }}
+                            &nbsp;&nbsp;
+                            {{ form_row(userForm.name,{'label':'Nume*'}) }}
+                            &nbsp;&nbsp;
+                            {{ form_row(userForm.phone,{'label':'Telefon'}) }}
+
+
+
+                        </div>
+                        </p>
+                    </div>
+
+
+
+                <div class="card-footer text-muted">
+                    <div class="horizontal-line">
+                        <button type="submit" class="btn btn-primary" formnovalidate>Submit</button>
+                        {{ form_end(userForm) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xs-2"></div>
+    </div>
+
+
+
+{% endblock %}

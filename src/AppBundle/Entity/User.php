@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="User")
  */
-class Subindustry
+class User
 {
   /**
    * @ORM\Id
@@ -71,5 +71,6 @@ class Subindustry
   public function setPhone($phone){
     $this->phone=$phone;
   }
+
 
 }
