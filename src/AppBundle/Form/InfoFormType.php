@@ -34,7 +34,9 @@ class InfoFormType extends AbstractType
 
                 'class'=> Subindustry::class,
                 'query_builder'=>function(EntityRepository $repository){
-                return $repository->createQueryBuilder('subindustrie')->orderBy('subindustrie.name','asc');
+
+                    return $repository->createQueryBuilder('subindustrie')->orderBy('subindustrie.name','asc');
+
                 },
                 'constraints' => array(
                     new NotBlank(['message' => 'Introduceti industria din care faceti parte'])),
