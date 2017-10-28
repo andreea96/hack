@@ -92,7 +92,7 @@ class DefaultController extends Controller
             $em->flush();
 
             $this->addFlash('succes','Va vom contacta cat mai curand!');
-            return $this->render('hellor');
+
 
         }
         return $this->render('default/userForm.html.twig',[
