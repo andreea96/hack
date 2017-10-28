@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b392204-971c-4986-a0ae-9908f1e3eec3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/Screenshot_3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/userForm.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/userForm.html.twig" />
     </list>
@@ -102,18 +101,25 @@
       <file leaf-file-name="userForm.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/default/userForm.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="89" column="14" lean-forward="true" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+            <state relative-caret-position="776">
+              <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
               <folding>
                 <element signature="e#655#688#0#HTML" expanded="true" />
                 <element signature="e#1480#1513#0#HTML" expanded="true" />
                 <element signature="e#2406#2439#0#HTML" expanded="true" />
-                <marker date="1509169205512" expanded="false" signature="3274:3280" ph=" " />
-                <marker date="1509169205512" expanded="false" signature="3280:3286" ph=" " />
-                <marker date="1509169205512" expanded="false" signature="3391:3397" ph=" " />
-                <marker date="1509169205512" expanded="false" signature="3397:3403" ph=" " />
+                <marker date="1509169426777" expanded="false" signature="3274:3280" ph=" " />
+                <marker date="1509169426777" expanded="false" signature="3280:3286" ph=" " />
+                <marker date="1509169426777" expanded="false" signature="3391:3397" ph=" " />
+                <marker date="1509169426777" expanded="false" signature="3397:3403" ph=" " />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Screenshot_3.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/images/Screenshot_3.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -606,7 +612,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69213000" />
+    <option name="totallyTimeSpent" value="69438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -642,14 +648,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="72" column="3" lean-forward="false" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/SubindustryRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -796,10 +794,10 @@
             <element signature="e#655#688#0#HTML" expanded="true" />
             <element signature="e#1480#1513#0#HTML" expanded="true" />
             <element signature="e#2406#2439#0#HTML" expanded="true" />
-            <marker date="1509169205512" expanded="false" signature="3274:3280" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3280:3286" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3391:3397" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3397:3403" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3274:3280" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3280:3286" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3391:3397" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3397:3403" ph=" " />
           </folding>
         </state>
       </provider>
@@ -1081,18 +1079,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/images/Screenshot_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/default/userForm.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="89" column="14" lean-forward="true" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
+        <state relative-caret-position="776">
+          <caret line="94" column="57" lean-forward="false" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
           <folding>
             <element signature="e#655#688#0#HTML" expanded="true" />
             <element signature="e#1480#1513#0#HTML" expanded="true" />
             <element signature="e#2406#2439#0#HTML" expanded="true" />
-            <marker date="1509169205512" expanded="false" signature="3274:3280" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3280:3286" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3391:3397" ph=" " />
-            <marker date="1509169205512" expanded="false" signature="3397:3403" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3274:3280" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3280:3286" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3391:3397" ph=" " />
+            <marker date="1509169426777" expanded="false" signature="3397:3403" ph=" " />
           </folding>
         </state>
       </provider>
