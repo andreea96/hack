@@ -22,6 +22,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Count;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Symfony\Component\Validator\Constraints\UrlValidator;
 
 class InfoFormType extends AbstractType
 {
@@ -36,10 +37,17 @@ class InfoFormType extends AbstractType
                 return $repository->createQueryBuilder('subindustrie')->orderBy('subindustrie.name','asc');
                 },
                 'constraints' => array(
-                    new NotBlank(['message' => 'Introduceti industria din care faceti parte']))])
+                    new NotBlank(['message' => 'Introduceti industria din care faceti parte'])),
+            'group_by'=>function(Subindustry $subindustrie,$key,$index)
+                {
+                    return $subindustrie->getIndustry()->getName();
+                }
+            ])
 
             ->add('site',TextType::class,[
-                    'constraints'=>[new NotBlank(['message'=> 'Ne trebuie url-ul site-ului tau'])]
+                    'constraints'=>[new NotBlank(['message'=> 'Ne trebuie url-ul site-ului tau']),
+                    //new UrlValidator()
+                    ]
                 ]);
 
     }

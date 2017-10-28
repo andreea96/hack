@@ -15,24 +15,24 @@
 
                     <p class="card-text  align-content-center" >
                     <div class="col-md-6">
-                        <div class="jumbotron jumbotron-fluid" style="background-color: #B8D2F6">
+                        <div class="jumbotron" style="background-color: #B8D2F6;height: 100%">
                             <div class="container">
-                                <h3 class="display-5">{{ traficPotentialTotal }} vizite pe luna</h3>
-                    <p class="lead">Lunar, exista {{ traficTotalGoogle }} de useri care cauta in Google produsele din industria ta! 60% dintre acestia dau click pe unul din primele trei rezultate, de ce nu ai fii si tu acolo?
-                        Pe Facebook, sunt {{ traficTotalSM }} de useri in Romania interesati de produsele din industra ta! Daca ajungi sa le atragi atentia, poti atrage pana la {{ traficPotentialSM }} de vizite lunar! .</p>
+                                <h3 class="display-5">{{ traficPotentialTotal | number_format }} vizite pe luna</h3>
+                    <p class="lead">Lunar, exista {{ traficTotalGoogle | number_format }} de useri care cauta in Google produsele din industria ta! 60% dintre acestia dau click pe unul din primele trei rezultate, de ce nu ai fii si tu acolo?
+                        Pe Facebook, sunt {{ traficTotalSM | number_format }} de useri in Romania interesati de produsele din industra ta! Daca ajungi sa le atragi atentia, poti atrage pana la {{ traficPotentialSM | number_format }} de vizite lunar! .</p>
                         </div>
                     </div>
                 </div>
                     <div class="col-md-6">
-                        <div class="jumbotron jumbotron-fluid" style="background-color: #8DAAF2">
+                        <div class="jumbotron" style="background-color: #8DAAF2; height: 100%">
                             <div class="container">
-                                <h3 class="display-5">{{  vanzariTotale }} de vanzari pe luna</h3>
+                                <h3 class="display-5">{{  vanzariTotale | number_format }} de vanzari pe luna</h3>
                                 <br />
                                 <br />
 
 
-                                <p class="lead">Lunar, poti avea pana la {{ traficPotentialTotal }} de vizite in site. Statistic, 1.5% din vizitatori ajung sa cumpere.
-                                    Astfel, te poti astepta la aproximativ {{ vanzariTotale }} de vanzari in fiecare luna!
+                                <p class="lead">Lunar, poti avea pana la {{ traficPotentialTotal | number_format}} de vizite in site. Statistic, 1.5% din vizitatori ajung sa cumpere.
+                                    Astfel, te poti astepta la aproximativ {{ vanzariTotale | number_format }} de vanzari in fiecare luna!
                                     <br />
                                     <br />
 
@@ -49,8 +49,8 @@
             <div class="col-md-12">
                 <div class="jumbotron jumbotron-fluid" style="background-color: #9EE2F3">
                     <div class="container">
-                        <h3 class="display-5">{{ revenueTotal  }} RON venit pe luna</h3>
-                        <p class="lead">Conform unui studiu realizat de GPeC, valoarea medie a unei comenzi pentru industria ta este de aproximativ 200 de RON. Poti obtine asadar lunar vanzari in valoare totala de {{ revenueTotal}} de RON!
+                        <h3 class="display-5">{{ revenueTotal | number_format }} RON venit pe luna</h3>
+                        <p class="lead">Conform unui studiu realizat de GPeC, valoarea medie a unei comenzi pentru industria ta este de aproximativ 200 de RON. Poti obtine asadar lunar vanzari in valoare totala de {{ revenueTotal | number_format }} de RON!
                         </p>
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                         <button type="submit" class="btn btn-primary" formnovalidate>Submit</button>
                         {{ form_end(userForm) }}
 
-                        <p>Sunt multi factori ce iti pot imbunatati rezultatele si multe tipuri de abordari posibile. Hai sa ne auzim la o cafea!</p>
+                        <p>Sunt multi factori ce iti pot imbunatati rezultatele si multe tipuri de abordari posibile. <a href="https://zitec.com/contact-us"> Hai sa ne auzim la o cafea!</a></p>
                     </div>
                 </div>
             </div>
