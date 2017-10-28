@@ -28,7 +28,7 @@
         </div>
         <div class="card-footer text-muted">
             <div class="horizontal-line">
-            <button type="submit" class="btn btn-primary" formnovalidate>Submit</button>
+            <button type="submit" onsubmit="sayThanks()" class="btn btn-primary" formnovalidate>Submit</button>
                 {{ form_end(form) }}
             </div>
         </div>
@@ -38,6 +38,10 @@
         <div class="col-xs-2"></div>
     </div>
 
-
+<script>
+    function saayThanks() {
+        alert('Va Multumim!');
+    }
+</script>
     
 {% endblock %}

@@ -103,10 +103,10 @@ class DefaultController extends Controller
             'traficPotentialTotal'=>$generator->getTrafficPotentialTotal(),
             'vanzariGoogle'=>$generator->getVanzaridinGoogle(),
             'vanzariSM'=>$generator->getVanzaridinSM(),
-            'vanzariTotale'=>$generator->getVanzariTotale(),
+            'vanzariTotale'=>(int)$generator->getVanzariTotale(),
             'revenueGoogle'=>$generator->getRevenueGoogle(),
             'revenueSM'=>$generator->getRevenuedinSM(),
-            'revenueTotal'=>$generator->getRevenueTotal(),
+            'revenueTotal'=>(int)$generator->getRevenueTotal(),
             'userForm' => $userInfoForm->createView(),
             'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
 
